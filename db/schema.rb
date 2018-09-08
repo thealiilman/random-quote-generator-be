@@ -10,16 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180902074316) do
+ActiveRecord::Schema.define(version: 20180908101342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "quotes", force: :cascade do |t|
-    t.string "quote"
-    t.string "originator"
+  create_table "originators", force: :cascade do |t|
+    t.string "name"
+    t.string "origin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "quotes", force: :cascade do |t|
+    t.string "quote"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "originator_id"
+    t.index ["originator_id"], name: "index_quotes_on_originator_id"
+  end
+
+  add_foreign_key "quotes", "originators"
 end
