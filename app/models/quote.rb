@@ -1,3 +1,4 @@
 class Quote < ApplicationRecord
-  validates :quote, :originator, presence: true
+  belongs_to :originator
+  validates :quote, presence: true
 end
