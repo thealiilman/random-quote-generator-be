@@ -3,7 +3,7 @@ module Api
     class QuotesController < ApplicationController
       def index
         quotes = Quote.all
-        render json: quotes
+        render json: QuoteSerializer.new(quotes)
       end
     end
   end
