@@ -12,6 +12,8 @@ gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 gem 'fast_jsonapi'
+gem 'rswag-api'
+gem 'rswag-ui'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -32,6 +34,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rails_best_practices'
   gem 'rubocop'
+  gem 'rswag-specs'
 end
 
 group :test do
