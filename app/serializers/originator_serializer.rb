@@ -1,4 +1,4 @@
 class OriginatorSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :origin, :quotes
+  attributes :name, :quotes
 end
