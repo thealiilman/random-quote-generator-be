@@ -1,4 +1,8 @@
 class QuoteSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :quote, :originator
+  attribute :quote
+
+  attribute :originator do |object|
+    OriginatorSerializer.new(object.originator)
+  end
 end

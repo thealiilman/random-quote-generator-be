@@ -23,7 +23,7 @@ module Api
       private
 
       def originator_params
-        params.permit(:name, :origin)
+        params.permit(:name)
       end
     end
   end
