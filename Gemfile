@@ -10,7 +10,7 @@ end
 gem 'rails', '~> 5.1.6'
 gem 'pg'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12'
 gem 'fast_jsonapi'
 gem 'rswag-api'
 gem 'rswag-ui'
